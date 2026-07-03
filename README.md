@@ -4,7 +4,7 @@ A single-file tower defense game built with vanilla HTML, CSS, and JavaScript â€
 
 I made it to have fun while entertaining my nephews on both playing and designing such a software, and to have an empirical benchmark platform measure my Self-Hosted systems quality about LLM inferencing, harnesses, scaffolds, software engineering, coding. 
 
-NOTE: it's almost impossible for me to manually testing all features. EXPECT BUGS and please open an issue if you find bugs or want to suggest new features.
+NOTE: it's almost impossible for me to manually test all features and options. EXPECT BUGS and please open an issue if you find one, or want to suggest new features.
 
 ## Features
 
