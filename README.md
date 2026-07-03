@@ -14,6 +14,7 @@ I made it to have fun while entertaining my nephews on both playing and designin
 - **Daily Challenge** with seeded RNG and streak tracking.
 - **Web Audio API** synthesized sound effects; **localStorage** persistence for best scores, prestige, and streaks.
 - **Game speed multiplier** (1×/2×/3×) that scales `dt` while rendering at real time.
+- and more, see full spec.
 
 ## Play
 
