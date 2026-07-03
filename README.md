@@ -1,7 +1,10 @@
 # Tower Defense
 
 A single-file tower defense game built with vanilla HTML, CSS, and JavaScript — zero external dependencies. Just open the file and play.
+
 I made it to have fun while entertaining my nephews on both playing and designing such a software, and to have an empirical benchmark platform measure my fully-local LLM inferencing, software architecting, coding capabilities.
+
+NOTE: it's almost impossible for me to manually testing all features. EXPECT BUGS and please open an issue if you find bugs or want to suggest new features.
 
 ## Features
 
