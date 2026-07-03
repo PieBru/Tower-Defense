@@ -729,8 +729,6 @@ function applyFeatures(){
   const ms=document.getElementById('map-select');
   if(F.maps){ms.innerHTML='<option value="0">Winding Path</option><option value="1">Serpent</option><option value="2">Crossroads</option><option value="3">Split River</option><option value="4">Straight Shot</option><option value="5">Zigzag</option><option value="6">Double Snake</option><option value="7">Labyrinth</option><option value="8">Serpentine</option><option value="9">Zigzag Top</option><option value="10">Serpentine Low</option><option value="11">Long Coil</option>'}
   else{ms.innerHTML='<option value="0">Winding Path</option>';ms.value='0'}
-  // Reload page to apply logic changes
-  if(document.querySelectorAll('.feat-item input:checked').length>0){setTimeout(()=>location.reload(),150)}
 }
 function restartGame(isEndless){document.getElementById('gameover-modal').style.display='none';money=100+Math.max(0,prUpg.richStart||0)*30;lives=20+(prUpg.fortify||0)*5;wave=0;score=0;towers=[];enemies=[];projs=[];particles=[];ftexts=[];st=-1;selTower=null;waveActive=false;pMM=1;pFreeW=false;pReinf=false;pScav=0;pFrost=false;pElemM=false;pASurge=false;streak=0;lastKillTime=0;overdriveTimer=0;overdriveStacks=0;shards=0;livesLostThisWave=0;endlessMode=isEndless||false;speedMult=1;pPhoenixUsed=false;dailyCompleted=false;bhpMultiplier=1;rewardMultiplier=1;costMultiplier=1;speedMultiplier=1;elemDamageMultiplier=1;buildPaths();updateHUD();hideUpg();hideAb();setStatus('Select a tower type, then click the map.')}
 

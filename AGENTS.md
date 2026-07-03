@@ -40,10 +40,10 @@ These are called out in the spec as silent-failure traps. Honor them:
 
 ### Feature toggle system (important)
 
-A collapsible **⚙️ Features** panel exposes ~15 independent checkboxes (`f-*` IDs), all **OFF** by default. State lives in the `F` object. Toggling any calls `applyFeatures()`, which syncs UI visibility and **reloads the page** to apply logic gates cleanly.
+A collapsible **⚙️ Features** panel exposes ~15 independent checkboxes (`f-*` IDs), all **OFF** by default. State lives in the `F` object. Toggling any calls `applyFeatures()`, which syncs UI visibility (tower buttons, ability bar, combo panel, HUD pieces, map dropdown) **live**. There is no page reload — feature state is in-memory only and is not persisted, so a refresh resets every feature to OFF.
 
-- `applyFeatures()` **must** run at init after `loadSave()`, or toggles desync on refresh.
-- Each feature's logic must check its flag **at the top of every relevant code path** (e.g. `F.elements` gates *both* affinity assignment in `spawnWave()` *and* the `elMult()` call in the shooting loop), not just in one spot.
+- All feature logic reads `F.*` live every frame (e.g. `F.elements` is checked *both* in `spawnWave()` for affinity assignment *and* in the shooting loop for `elMult()`), so toggles take effect instantly without a reload. Add new feature logic the same way: gate it at the top of each relevant code path.
+- `applyFeatures()` **must** run at init after `loadSave()`, so UI visibility matches the (default-OFF) flags on first paint.
 - Disabled features need fallback objects so the math doesn't crash (e.g. `{dm:1,rm:1,fr:1}` for synergy when combos are off).
 - Basic tower is always visible and never gated.
 
